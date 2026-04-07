@@ -1,0 +1,1 @@
+{"version":3,"file":"worker.d.ts","sourceRoot":"","sources":["../../src/worker.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAO,MAAM,QAAQ,CAAC;AA+BrC,UAAU,cAAc;IACtB,KAAK,EAAE,MAAM,CAAC;IACd,iBAAiB,EAAE,MAAM,CAAC;CAC3B;AA8JD,wBAAgB,WAAW,IAAI,MAAM,CAAC,cAAc,CAAC,CA0BpD"}
