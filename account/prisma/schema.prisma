@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id             String   @id @default(uuid()) @db.Uuid
+  userId         String
+  currency       String
+  balance        Decimal  @default(0) @db.Decimal(20, 2)
+  encryptedName  String
+  encryptedEmail String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([userId, currency])
+  @@index([userId])
+}
