@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TransactionStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  REVERSED
+}
+
+model Transaction {
+  id                   String            @id @default(uuid()) @db.Uuid
+  idempotencyKey       String            @unique
+  sourceAccountId      String            @db.Uuid
+  destinationAccountId String            @db.Uuid
+  amount               Decimal           @db.Decimal(20, 2)
+  currency             String
+  fxQuoteId            String?           @db.Uuid
+  status               TransactionStatus @default(PENDING)
+  payloadHash          String
+  createdAt            DateTime          @default(now())
+  updatedAt            DateTime          @updatedAt
+
+  @@index([idempotencyKey])
+  @@index([sourceAccountId])
+}
+
+model IdempotencyRecord {
+  id          String   @id @default(uuid()) @db.Uuid
+  key         String   @unique
+  payloadHash String
+  response    Json?
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+}

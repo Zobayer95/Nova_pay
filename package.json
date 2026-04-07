@@ -1,0 +1,24 @@
+{
+  "name": "novapay",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev:gateway": "npm run dev --workspace=services/gateway",
+    "dev:account": "npm run dev --workspace=services/account",
+    "dev:transaction": "npm run dev --workspace=services/transaction",
+    "dev:ledger": "npm run dev --workspace=services/ledger",
+    "dev:fx": "npm run dev --workspace=services/fx",
+    "dev:payroll": "npm run dev --workspace=services/payroll",
+    "dev:admin": "npm run dev --workspace=services/admin"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
