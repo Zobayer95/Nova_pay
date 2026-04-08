@@ -6,7 +6,7 @@ describe('EnvelopeEncryption', () => {
   let encryption: EnvelopeEncryption;
  
   beforeEach(() => {
-    encryption = new EnvelopeEncryption(TEST_MASTER_KEY);
+    encryption = new EnvelopeEncryption(TEST_MASTER_KEY); 
   });
 
   it('encrypts and decrypts strings correctly', () => {
