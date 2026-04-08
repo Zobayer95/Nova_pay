@@ -5,7 +5,7 @@ const TEST_MASTER_KEY = 'a'.repeat(64);
 describe('EnvelopeEncryption', () => {
   let encryption: EnvelopeEncryption;
  
-  beforeEach(() => {
+  beforeEach(() => { 
     encryption = new EnvelopeEncryption(TEST_MASTER_KEY); 
   });
 
