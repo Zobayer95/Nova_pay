@@ -2,7 +2,7 @@ import { EnvelopeEncryption, hashPayload, computeHashChain } from '../encryption
 
 const TEST_MASTER_KEY = 'a'.repeat(64);
 
-describe('EnvelopeEncryption', () => { 
+describe('EnvelopeEncryption', () => {  
   let encryption: EnvelopeEncryption;
  
   beforeEach(() => { 
