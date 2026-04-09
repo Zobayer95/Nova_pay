@@ -5,7 +5,7 @@ import {
   requestIdMiddleware,
   requestLogger,
   errorHandler, 
-  createMetricsMiddleware,
+  createMetricsMiddleware, 
 } from '@novapay/shared';
 import { router } from './routes';
 
