@@ -3,7 +3,7 @@ import { register } from 'prom-client';
 import {
   createLogger,
   requestIdMiddleware,
-  requestLogger, 
+  requestLogger,  
   errorHandler, 
   createMetricsMiddleware, 
 } from '@novapay/shared'; 
