@@ -6,7 +6,7 @@ import {
   requestLogger, 
   errorHandler, 
   createMetricsMiddleware, 
-} from '@novapay/shared';
+} from '@novapay/shared'; 
 import { router } from './routes';
 
 const logger = createLogger('account-service');
