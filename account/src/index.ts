@@ -7,7 +7,7 @@ import {
   errorHandler,
   createMetricsMiddleware, 
 } from '@novapay/shared'; 
-import { router } from './routes';
+import { router } from './routes'; 
 
 const logger = createLogger('account-service');
 
