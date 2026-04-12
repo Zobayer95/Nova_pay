@@ -1,5 +1,5 @@
 import express from 'express';
-import { register } from 'prom-client';
+import { register } from 'prom-client'; 
 import {
   createLogger,
   requestIdMiddleware,  
