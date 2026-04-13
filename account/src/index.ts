@@ -9,7 +9,7 @@ import {
 } from '@novapay/shared';    
 import { router } from './routes';  
 
-const logger = createLogger('account-service'); 
+const logger = createLogger('account-service');  
 
 const app = express();
  
