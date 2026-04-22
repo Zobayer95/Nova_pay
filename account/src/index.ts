@@ -8,7 +8,7 @@ import {
   createMetricsMiddleware,      
 } from '@novapay/shared';         
 import { router } from './routes';    
-  
+   
 const logger = createLogger('account-service');  
  
 const app = express();
