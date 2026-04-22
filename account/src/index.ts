@@ -10,7 +10,7 @@ import {
 import { router } from './routes';   
   
 const logger = createLogger('account-service');  
-
+ 
 const app = express();
  
 app.use(express.json());
